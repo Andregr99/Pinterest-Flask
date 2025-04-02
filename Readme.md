@@ -5,10 +5,15 @@ Este projeto Flask implementa um clone simplificado do Pinterest, permitindo aos
 ## ⚙️ **Funcionalidades**  
 
 ✅ **Cadastro de Usuários:** Permite que novos usuários criem contas com nome de usuário, e-mail e senha.
+
 ✅ **Login de Usuários:** Permite que usuários cadastrados façam login para acessar suas contas.
+
 ✅ **Perfil de Usuário:** Cada usuário possui um perfil onde pode visualizar suas próprias fotos e postar novas fotos.
+
 ✅ **Feed de Fotos:** Exibe um feed com as fotos postadas por todos os usuários, ordenadas por data de criação.
+
 ✅ **Pesquisa de Fotos:** Permite pesquisar fotos por descrição.
+
 ✅ **Upload de Fotos:** Permite que usuários façam upload de fotos para seus perfis.
 
 ## 🚀 **Tecnologias Utilizadas**
