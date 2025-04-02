@@ -27,8 +27,8 @@ Este projeto Flask implementa um clone simplificado do Pinterest, permitindo aos
 
 1️⃣  **Clone o repositório:**
 
-    git clone <URL_DO_SEU_REPOSITÓRIO>
-    cd <NOME_DO_DIRETÓRIO_DO_PROJETO>
+    git clone https://github.com/Andregr99/Pinterest-Flask.git
+    No seu terminal digite: cd fakepinterest
 
 2️⃣  **Crie e ative um ambiente virtual:**
 
