@@ -1,3 +1,4 @@
+# criar os formularios do nosso site
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, FileField
 from wtforms.validators import DataRequired, Email, EqualTo, Length, ValidationError
@@ -26,3 +27,8 @@ class FormCriarConta(FlaskForm):
 class FormFoto(FlaskForm):
     foto = FileField("Foto", validators=[DataRequired()])
     botao_confirmacao = SubmitField("Enviar")
+
+# Adicione o FormPesquisa aqui
+class FormPesquisa(FlaskForm):
+    pesquisa = StringField("Pesquisar", validators=[DataRequired()])
+    botao_pesquisar = SubmitField("Pesquisar")

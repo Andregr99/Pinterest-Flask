@@ -1,0 +1,25 @@
+{% extends "homepage.html" %}
+
+{% block body %}
+    {% include "navbar.html" %}
+
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="conteudo">
+            {% for foto in fotos %}
+                <a href="{{ url_for('perfil', id_usuario=foto.id_usuario) }}" class="bloco-imagem">
+                    <img src="{{ url_for('static', filename='fotos_posts/{}'.format(foto.imagem)) }}" />
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

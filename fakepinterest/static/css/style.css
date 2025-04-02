@@ -1,0 +1,325 @@
+:root {
+  /* Cores */
+  --cor-principal: #c00;
+  --cor-texto-principal: #333;
+  --cor-texto-secundario: #777;
+  --cor-fundo-claro: #fff;
+  --cor-fundo-cinza: #eee;
+  --cor-borda-input: #cdcdcd;
+  --cor-botao-principal: #e60023;
+  --cor-botao-principal-hover: #d50c22;
+  --cor-botao-perfil: #333;
+  --cor-botao-perfil-hover: #777;
+  --cor-fundo-popup: rgba(0, 0, 0, 0.6);
+
+  /* Fontes */
+  --fonte-principal: Montserrat, sans-serif;
+  --fonte-titulo: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  /* Espaçamentos */
+  --espacamento-pequeno: 4px;
+  --espacamento-medio: 10px;
+  --espacamento-grande: 15px;
+  --espacamento-extra-grande: 20px;
+  --espacamento-padding-nav: 16px;
+  --espacamento-padding-popup: 35px;
+
+  /* Tamanhos */
+  --tamanho-fonte-nav: 16px;
+  --tamanho-fonte-titulo: 20px;
+  --tamanho-fonte-input: 16px;
+  --tamanho-fonte-label: 15px;
+  --tamanho-raio-borda-input: 20px;
+  --tamanho-raio-borda-botao: 25px;
+  --tamanho-raio-borda-imagem: 20px;
+  --tamanho-raio-borda-popup: 32px;
+  --tamanho-raio-borda-bloco-arquivo: 55px;
+  --tamanho-altura-imagem: 40vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto-principal);
+}
+
+h1 {
+  color: var(--cor-principal);
+  font-size: var(--tamanho-fonte-titulo);
+  font-family: var(--fonte-titulo);
+  display: inline;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+nav {
+  padding: var(--espacamento-padding-nav);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-nav {
+  font-size: var(--tamanho-fonte-nav);
+  font-weight: 600;
+  color: var(--cor-texto-principal);
+  text-decoration: none;
+}
+
+.link-nav:hover {
+  text-decoration: underline;
+}
+
+.restante-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.restante-nav form {
+  display: flex;
+  align-items: center;
+  margin: 0 16px;
+  width: 100%;
+}
+
+.restante-nav input[type="text"] {
+  width: 100%;
+  padding: 0 8px;
+  border: 1px solid var(--cor-borda-input);
+  border-radius: 12px;
+  margin-right: 5px;
+  background-color: rgb(241, 241, 241);
+  height: 40px;
+}
+
+.restante-nav button[type="submit"] {
+  padding: 8px 12px;
+  background-color: var(--cor-botao-principal);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container-login {
+  padding-bottom: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bg-imagem-pinterest {
+  width: 100%;
+  position: fixed;
+  top: 20vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-extra-grande);
+}
+
+.container-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--cor-fundo-popup);
+  display: flex;
+}
+
+.popup {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espacamento-extra-grande);
+  padding: var(--espacamento-padding-popup);
+  border-radius: var(--tamanho-raio-borda-popup);
+  background-color: var(--cor-fundo-claro);
+}
+
+.div-input, .div-botao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+label {
+  margin-left: var(--espacamento-grande);
+  font-size: var(--tamanho-fonte-label);
+}
+
+.input {
+  width: 100%;
+  font-size: var(--tamanho-fonte-input);
+  padding: var(--espacamento-grande);
+  border: 2px solid var(--cor-borda-input);
+  border-radius: var(--tamanho-raio-borda-input);
+}
+
+.botao-login {
+  border-radius: var(--tamanho-raio-borda-botao);
+  padding: var(--espacamento-grande) var(--espacamento-extra-grande);
+  width: 100%;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--cor-botao-principal);
+  color: var(--cor-fundo-claro);
+}
+
+.botao-login:hover {
+  background-color: var(--cor-botao-principal-hover);
+}
+
+.link-criarconta {
+  color: var(--cor-texto-principal);
+  text-decoration: none;
+}
+
+.link-criarconta:hover {
+  text-decoration: underline;
+}
+
+.botao-perfil {
+  margin-right: 10px;
+}
+
+.botao-perfil a {
+  background-color: var(--cor-botao-perfil);
+  color: var(--cor-fundo-claro);
+  padding: var(--espacamento-medio) var(--espacamento-extra-grande);
+  border-radius: var(--tamanho-raio-borda-botao);
+}
+
+.botao-perfil a:hover {
+  background-color: var(--cor-botao-perfil-hover);
+  text-decoration: none;
+}
+
+.conteudo {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--espacamento-medio);
+  padding: var(--espacamento-grande);
+}
+
+.bloco-imagem img {
+  border-radius: var(--tamanho-raio-borda-imagem);
+  height: var(--tamanho-altura-imagem);
+}
+
+.bloco-add-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espacamento-medio);
+}
+
+.botao-arquivo {
+  border-radius: 15px;
+  border: 0;
+  color: var(--cor-texto-principal);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+}
+
+.bloco-arquivo {
+  background-color: var(--cor-fundo-cinza);
+  padding: var(--espacamento-medio) var(--espacamento-extra-grande);
+  border-radius: var(--tamanho-raio-borda-bloco-arquivo);
+  display: flex;
+  align-items: center;
+  gap: var(--espacamento-medio);
+}
+
+.input-arquivo, #imagem-arquivo {
+  display: none;
+}
+
+#imagem-arquivo.visivel {
+  display: inline-block;
+}
+
+.bloco-add-img .botao-login {
+  width: auto;
+}
+
+.bloco-input-botao {
+  display: flex;
+  gap: var(--espacamento-extra-grande);
+}
+
+.alert {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+@media (max-width:1300px) {
+  .conteudo {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width:900px) {
+  .conteudo {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width:670px) {
+  .popup {
+    margin: auto 10px;
+  }
+  .conteudo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logo-pinterest h1 {
+    display: none;
+  }
+}
+
+@media (min-width:670px) {
+  .logo-pinterest  {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+}

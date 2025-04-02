@@ -1,3 +1,4 @@
+# criar a estrutura do banco de dados
 from fakepinterest import database, login_manager
 from datetime import datetime
 from flask_login import UserMixin
@@ -16,9 +17,10 @@ class Usuario(database.Model, UserMixin):
     fotos = database.relationship("Foto", backref="usuario", lazy=True)
 
 
-class Foto(database.Model):
+class Foto(database.Model):  # <-- Alterado de db.Model para database.Model
     id = database.Column(database.Integer, primary_key=True)
-    imagem = database.Column(database.String, default="default.png")
-    data_criacao = database.Column(database.DateTime, nullable=False, default=datetime.utcnow())
+    imagem = database.Column(database.String, nullable=False)
+    descricao = database.Column(database.String, nullable=True)
+    data_criacao = database.Column(database.DateTime, default=datetime.utcnow)
     id_usuario = database.Column(database.Integer, database.ForeignKey('usuario.id'), nullable=False)
-    
+

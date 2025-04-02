@@ -1,0 +1,14 @@
+{% extends "homepage.html" %}
+
+{% block body %}
+    <h2>Resultados da pesquisa para "{{ query }}"</h2>
+
+    {% if mensagem %}
+        <p>{{ mensagem }}</p>
+    {% else %}
+        {% for foto in resultados %}
+            <img src="{{ url_for('static', filename='fotos_posts/' + foto.imagem) }}" alt="{{ foto.descricao }}" width="200">
+            <p>{{ foto.descricao }}</p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
